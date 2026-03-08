@@ -19,6 +19,7 @@ def test_get_zipcode():
     zipcode_data = response.json()
 
     assert response.status_code == 200
+    assert isinstance(zipcode_data, dict)
     assert "country" in zipcode_data
     assert zipcode_data["country"] == country
     assert isinstance(zipcode_data["country"], str)

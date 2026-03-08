@@ -19,6 +19,7 @@ def test_get_users():
     users_data = response.json()
 
     assert response.status_code == 200
+    assert isinstance(users_data, dict)
     assert isinstance(users_data["id"], int)
     assert "name" in users_data
     assert users_data["name"] == expected_name
