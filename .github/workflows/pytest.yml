@@ -1,5 +1,9 @@
 name: Run Pytest
 
+permissions:
+  contents: read
+  checks: write
+
 on:
   push:
     branches: [ main ]
